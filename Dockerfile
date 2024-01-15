@@ -6,6 +6,6 @@ RUN mvn clean install
 FROM eclipse-temurin:17.0.6_10-jdk
 WORKDIR /app
 RUN rm -rf /app/*
-COPY --from=build /app/target/demoapp.jar /app/
+COPY --from=build /app/target/ complete-prodcution-e2e-pipeline-1.0-SNAPSHOT.jar /app/
 EXPOSE 8080
-CMD ["java", "-jar","demoapp.jar"]
+CMD ["java", "-jar"," complete-prodcution-e2e-pipeline-1.0-SNAPSHOT.jar"]
